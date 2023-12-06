@@ -27,11 +27,11 @@ void myswap::swap(Data& obj_1, Data& obj_2)
     // 2 вариант
     case variants::scoped_lock:
     {
-//        std::scoped_lock sc_lk(obj_1.mut, obj_2.mut);
+        std::scoped_lock sc_lk(obj_1.mut, obj_2.mut);
 
-//        Data tmp = std::move(obj_1);
-//        obj_1 = std::move(obj_2);
-//        obj_2 = std::move(tmp);
+        Data tmp = std::move(obj_1);
+        obj_1 = std::move(obj_2);
+        obj_2 = std::move(tmp);
     }
         break;
 

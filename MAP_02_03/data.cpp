@@ -13,7 +13,6 @@ Data::Data()
 Data::Data(Data&& other)
 {
     value = std::move(other.value);
-    mut.lock();
 }
 
 Data& Data::operator=(Data&& other)

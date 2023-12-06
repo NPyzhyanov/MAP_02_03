@@ -3,7 +3,7 @@
 
 namespace settings
 {
-variants::variants solution_variant = variants::scoped_lock;
+variants::variants solution_variant = variants::unique_lock;
 }
 
 #endif // SETTINGS_H
